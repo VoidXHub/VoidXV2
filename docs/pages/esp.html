@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta name="description" content="VoidxV2 - Advanced Roblox UI Library with Window system, Tabs, Components, ESP, and more.">
+    <meta name="keywords" content="Roblox, UI Library, VoidxV2, Exploit, Scripting, Lua, GUI, Interface, Cheat, ESP">
+    <meta name="author" content="josefk">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ijosephyusufk-dev.github.io/VoidXV2/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP System - VoidxV2 Docs</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🔮</span>
+                <span class="logo-text">VoidxV2</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <button class="search-btn" onclick="openSearch()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <span>Search...</span>
+                <kbd>Ctrl K</kbd>
+            </button>
+        </div>
+        <div class="navbar-right">
+            <a href="https://github.com/ijosephyusufk-dev/VoidXV2" target="_blank" class="nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <a href="../index.html" class="nav-item">
+                        <span class="nav-icon">🏠</span>
+                        Welcome
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Getting Started</div>
+                    <a href="installation.html" class="nav-item">
+                        <span class="nav-icon">📦</span>
+                        Installation
+                    </a>
+                    <a href="quick-start.html" class="nav-item">
+                        <span class="nav-icon">🚀</span>
+                        Quick Start
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Core Components</div>
+                    <a href="window.html" class="nav-item">
+                        <span class="nav-icon">🪟</span>
+                        Window
+                    </a>
+                    <a href="tabs.html" class="nav-item">
+                        <span class="nav-icon">📑</span>
+                        Tabs
+                    </a>
+                    <a href="components.html" class="nav-item">
+                        <span class="nav-icon">🎨</span>
+                        Components
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Developer Utilities</div>
+                    <a href="esp.html" class="nav-item active">
+                        <span class="nav-icon">👁️</span>
+                        ESP System
+                    </a>
+                    <a href="observer.html" class="nav-item">
+                        <span class="nav-icon">🔍</span>
+                        Observer
+                    </a>
+                    <a href="filter.html" class="nav-item">
+                        <span class="nav-icon">🎯</span>
+                        Filter
+                    </a>
+                    <a href="zone.html" class="nav-item">
+                        <span class="nav-icon">📍</span>
+                        Zone
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Customization</div>
+                    <a href="themes.html" class="nav-item">
+                        <span class="nav-icon">🎭</span>
+                        Themes
+                    </a>
+                    <a href="state.html" class="nav-item">
+                        <span class="nav-icon">💾</span>
+                        State Management
+                    </a>
+                    <a href="events.html" class="nav-item">
+                        <span class="nav-icon">⚡</span>
+                        Events
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <article class="article">
+                <h1>ESP System</h1>
+
+                <p>The ESP (Extra Sensory Perception) system provides powerful player visualization with Shadow ESP
+                    technology that covers the entire character.</p>
+
+                <div class="alert alert-new">
+                    <strong>🆕 New in v2.0:</strong> Shadow ESP uses Roblox's Highlight system for smooth,
+                    performance-optimized rendering.
+                </div>
+
+                <h2 id="basic-usage">Basic Usage</h2>
+
+                <pre><code class="language-lua">local esp = Library.Developer:CreateESP({
+    Target = game.Players,
+    Shadow = true,      -- Highlight-based ESP (covers entire character)
+    Name = true,        -- Show player names
+    Health = true,      -- Show health bars
+    Distance = true,    -- Show distance
+    TeamCheck = false,  -- Ignore teams
+    MaxDistance = 500,  -- Maximum render distance
+    Color = Color3.fromRGB(255, 100, 100)
+})</code></pre>
+
+                <h2 id="options">Configuration Options</h2>
+
+                <table class="options-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Target</code></td>
+                            <td>Players</td>
+                            <td>game.Players</td>
+                            <td>The Players service to track</td>
+                        </tr>
+                        <tr>
+                            <td><code>Shadow</code></td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Enable Shadow ESP (Highlight)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Name</code></td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Show player names</td>
+                        </tr>
+                        <tr>
+                            <td><code>Health</code></td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Show health bars</td>
+                        </tr>
+                        <tr>
+                            <td><code>Distance</code></td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Show distance in studs</td>
+                        </tr>
+                        <tr>
+                            <td><code>TeamCheck</code></td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Only show enemy team</td>
+                        </tr>
+                        <tr>
+                            <td><code>MaxDistance</code></td>
+                            <td>number</td>
+                            <td>1000</td>
+                            <td>Maximum render distance</td>
+                        </tr>
+                        <tr>
+                            <td><code>Color</code></td>
+                            <td>Color3</td>
+                            <td>Red</td>
+                            <td>ESP color</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="methods">Methods</h2>
+
+                <h3>Toggle Features</h3>
+                <pre><code class="language-lua">-- Toggle individual features (while ESP is active)
+esp:ToggleShadow(true)    -- Toggle shadow glow
+esp:ToggleName(true)      -- Toggle names
+esp:ToggleHealth(true)    -- Toggle health bars
+esp:ToggleDistance(true)  -- Toggle distance</code></pre>
+
+                <h3>Change Settings</h3>
+                <pre><code class="language-lua">esp:SetColor(Color3.fromRGB(0, 255, 0))  -- Change color
+esp:SetMaxDistance(1000)                  -- Change max distance
+esp:Toggle(false)                         -- Disable entire ESP</code></pre>
+
+                <h3>Cleanup</h3>
+                <pre><code class="language-lua">esp:Destroy()  -- Remove ESP completely</code></pre>
+
+                <h2 id="example">Complete Example</h2>
+
+                <pre><code class="language-lua">-- Create ESP
+local esp = Library.Developer:CreateESP({
+    Shadow = true,
+    Name = true,
+    Health = true,
+    Distance = true,
+    MaxDistance = 500,
+    Color = Color3.fromRGB(255, 100, 100)
+})
+
+-- Create UI controls
+MainTab:CreateToggle("Enable ESP", true, function(enabled)
+    esp:Toggle(enabled)
+end)
+
+MainTab:CreateToggle("Show Shadow", true, function(enabled)
+    esp:ToggleShadow(enabled)
+end)
+
+MainTab:CreateToggle("Show Health", true, function(enabled)
+    esp:ToggleHealth(enabled)
+end)
+
+MainTab:CreateSlider("Max Distance", 100, 1000, 500, function(value)
+    esp:SetMaxDistance(value)
+end)
+
+MainTab:CreateColorPicker("ESP Color", Color3.fromRGB(255, 100, 100), function(color)
+    esp:SetColor(color)
+end)</code></pre>
+
+                <h2 id="visual">Visual Appearance</h2>
+
+                <div class="visual-demo">
+                    <pre style="background: #0d1117; padding: 30px; text-align: center;">
+        ┌─── PlayerName ───┐
+        │ ████████ 100%   │
+        │     [150m]      │
+        └─────────────────┘
+             ▓▓▓▓▓
+            ▓ ▓▓ ▓  ← Shadow Highlight
+            ▓ ▓▓ ▓    (Glows through walls)
+             ▓▓▓▓
+                    </pre>
+                </div>
+            </article>
+        </main>
+
+        <aside class="toc">
+            <div class="toc-title">On this page</div>
+            <nav class="toc-nav">
+                <a href="#basic-usage" class="toc-link">Basic Usage</a>
+                <a href="#options" class="toc-link">Configuration Options</a>
+                <a href="#methods" class="toc-link">Methods</a>
+                <a href="#example" class="toc-link">Complete Example</a>
+                <a href="#visual" class="toc-link">Visual Appearance</a>
+            </nav>
+        </aside>
+    </div>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <input type="text" class="search-input" placeholder="Search documentation...">
+            <div class="search-results"></div>
+            <div class="search-footer">
+                <span><kbd>↑↓</kbd> Navigate</span>
+                <span><kbd>Enter</kbd> Open</span>
+                <span><kbd>Esc</kbd> Close</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/main.js"></script>
+
+    <style>
+        .alert {
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .alert-new {
+            background: rgba(63, 185, 80, 0.15);
+            border-left: 4px solid var(--success);
+        }
+
+        .options-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        .options-table th,
+        .options-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .options-table th {
+            background: var(--bg-card);
+            font-weight: 600;
+        }
+
+        .options-table code {
+            background: var(--bg-input);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</body>
+
+</html>
+
+

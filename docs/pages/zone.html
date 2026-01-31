@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta name="description" content="VoidxV2 - Advanced Roblox UI Library with Window system, Tabs, Components, ESP, and more.">
+    <meta name="keywords" content="Roblox, UI Library, VoidxV2, Exploit, Scripting, Lua, GUI, Interface, Cheat, ESP">
+    <meta name="author" content="josefk">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ijosephyusufk-dev.github.io/VoidXV2/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone - VoidxV2 Docs</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left"><a href="../index.html" class="logo"><span class="logo-icon">🔮</span><span
+                    class="logo-text">VoidxV2</span></a></div>
+        <div class="navbar-center"><button class="search-btn" onclick="openSearch()"><svg width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg><span>Search...</span><kbd>Ctrl K</kbd></button></div>
+        <div class="navbar-right"><a href="https://github.com/ijosephyusufk-dev/VoidXV2" target="_blank"
+                class="nav-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                </svg></a></div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section"><a href="../index.html" class="nav-item"><span
+                            class="nav-icon">🏠</span>Welcome</a></div>
+                <div class="nav-section">
+                    <div class="nav-title">Getting Started</div><a href="installation.html" class="nav-item"><span
+                            class="nav-icon">📦</span>Installation</a><a href="quick-start.html" class="nav-item"><span
+                            class="nav-icon">🚀</span>Quick Start</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Core Components</div><a href="window.html" class="nav-item"><span
+                            class="nav-icon">🪟</span>Window</a><a href="tabs.html" class="nav-item"><span
+                            class="nav-icon">📑</span>Tabs</a><a href="components.html" class="nav-item"><span
+                            class="nav-icon">🎨</span>Components</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Developer Utilities</div><a href="esp.html" class="nav-item"><span
+                            class="nav-icon">👁️</span>ESP System</a><a href="observer.html" class="nav-item"><span
+                            class="nav-icon">🔍</span>Observer</a><a href="filter.html" class="nav-item"><span
+                            class="nav-icon">🎯</span>Filter</a><a href="zone.html" class="nav-item active"><span
+                            class="nav-icon">📍</span>Zone</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Customization</div><a href="themes.html" class="nav-item"><span
+                            class="nav-icon">🎭</span>Themes</a><a href="state.html" class="nav-item"><span
+                            class="nav-icon">💾</span>State Management</a><a href="events.html" class="nav-item"><span
+                            class="nav-icon">⚡</span>Events</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <article class="article">
+                <h1>Zone</h1>
+                <p>Create virtual zones that detect when players enter or exit.</p>
+
+                <h2 id="create">CreateZone</h2>
+                <pre><code class="language-lua">local zone = Library.Developer:CreateZone({
+    Type = "Sphere",          -- "Sphere" or "Box"
+    Position = Vector3.new(0, 5, 0),
+    Size = 50,                -- Radius (Sphere) or Vector3 (Box)
+    Visualize = true,         -- Show zone visually
+    OnEnter = function(player)
+        print(player.Name .. " entered zone!")
+    end,
+    OnExit = function(player)
+        print(player.Name .. " left zone!")
+    end
+})</code></pre>
+
+                <h2 id="options">Options</h2>
+                <table class="options-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Type</code></td>
+                            <td>string</td>
+                            <td>"Sphere" or "Box"</td>
+                        </tr>
+                        <tr>
+                            <td><code>Position</code></td>
+                            <td>Vector3</td>
+                            <td>Center of the zone</td>
+                        </tr>
+                        <tr>
+                            <td><code>Size</code></td>
+                            <td>number/Vector3</td>
+                            <td>Radius (Sphere) or dimensions (Box)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Visualize</code></td>
+                            <td>boolean</td>
+                            <td>Show visual representation</td>
+                        </tr>
+                        <tr>
+                            <td><code>OnEnter</code></td>
+                            <td>function</td>
+                            <td>Called when player enters</td>
+                        </tr>
+                        <tr>
+                            <td><code>OnExit</code></td>
+                            <td>function</td>
+                            <td>Called when player exits</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="methods">Methods</h2>
+                <pre><code class="language-lua">local players = zone:GetPlayersInside()  -- Get all players in zone
+zone:Destroy()                            -- Remove zone</code></pre>
+
+                <h2 id="example">Safe Zone Example</h2>
+                <pre><code class="language-lua">-- Create a safe zone around spawn
+local spawnZone = Library.Developer:CreateZone({
+    Type = "Sphere",
+    Position = Vector3.new(0, 5, 0),
+    Size = 30,
+    Visualize = true,
+    OnEnter = function(player)
+        if player == game.Players.LocalPlayer then
+            Window:Notify("Safe Zone", "You entered the safe zone", 2, "info")
+        end
+    end,
+    OnExit = function(player)
+        if player == game.Players.LocalPlayer then
+            Window:Notify("Warning", "You left the safe zone!", 2, "warning")
+        end
+    end
+})</code></pre>
+            </article>
+        </main>
+
+        <aside class="toc">
+            <div class="toc-title">On this page</div>
+            <nav class="toc-nav"><a href="#create" class="toc-link">CreateZone</a><a href="#options"
+                    class="toc-link">Options</a><a href="#methods" class="toc-link">Methods</a><a href="#example"
+                    class="toc-link">Safe Zone Example</a></nav>
+        </aside>
+    </div>
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content"><input type="text" class="search-input" placeholder="Search documentation...">
+            <div class="search-results"></div>
+            <div class="search-footer"><span><kbd>↑↓</kbd> Navigate</span><span><kbd>Enter</kbd>
+                    Open</span><span><kbd>Esc</kbd> Close</span></div>
+        </div>
+    </div>
+    <script src="../js/prism.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/main.js"></script>
+    <style>
+        .options-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0
+        }
+
+        .options-table th,
+        .options-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .options-table th {
+            background: var(--bg-card);
+            font-weight: 600
+        }
+
+        .options-table code {
+            background: var(--bg-input);
+            padding: 2px 6px;
+            border-radius: 4px
+        }
+    </style>
+</body>
+
+</html>
+
+

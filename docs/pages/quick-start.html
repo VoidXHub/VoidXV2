@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta name="description" content="VoidxV2 - Advanced Roblox UI Library with Window system, Tabs, Components, ESP, and more.">
+    <meta name="keywords" content="Roblox, UI Library, VoidxV2, Exploit, Scripting, Lua, GUI, Interface, Cheat, ESP">
+    <meta name="author" content="josefk">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ijosephyusufk-dev.github.io/VoidXV2/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start - VoidxV2 Docs</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🔮</span>
+                <span class="logo-text">VoidxV2</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <button class="search-btn" onclick="openSearch()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <span>Search...</span>
+                <kbd>Ctrl K</kbd>
+            </button>
+        </div>
+        <div class="navbar-right">
+            <a href="https://github.com/ijosephyusufk-dev/VoidXV2" target="_blank" class="nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <a href="../index.html" class="nav-item">
+                        <span class="nav-icon">🏠</span>
+                        Welcome
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Getting Started</div>
+                    <a href="installation.html" class="nav-item">
+                        <span class="nav-icon">📦</span>
+                        Installation
+                    </a>
+                    <a href="quick-start.html" class="nav-item active">
+                        <span class="nav-icon">🚀</span>
+                        Quick Start
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Core Components</div>
+                    <a href="window.html" class="nav-item">
+                        <span class="nav-icon">🪟</span>
+                        Window
+                    </a>
+                    <a href="tabs.html" class="nav-item">
+                        <span class="nav-icon">📑</span>
+                        Tabs
+                    </a>
+                    <a href="components.html" class="nav-item">
+                        <span class="nav-icon">🎨</span>
+                        Components
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Developer Utilities</div>
+                    <a href="esp.html" class="nav-item">
+                        <span class="nav-icon">👁️</span>
+                        ESP System
+                    </a>
+                    <a href="observer.html" class="nav-item">
+                        <span class="nav-icon">🔍</span>
+                        Observer
+                    </a>
+                    <a href="filter.html" class="nav-item">
+                        <span class="nav-icon">🎯</span>
+                        Filter
+                    </a>
+                    <a href="zone.html" class="nav-item">
+                        <span class="nav-icon">📍</span>
+                        Zone
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Customization</div>
+                    <a href="themes.html" class="nav-item">
+                        <span class="nav-icon">🎭</span>
+                        Themes
+                    </a>
+                    <a href="state.html" class="nav-item">
+                        <span class="nav-icon">💾</span>
+                        State Management
+                    </a>
+                    <a href="events.html" class="nav-item">
+                        <span class="nav-icon">⚡</span>
+                        Events
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <article class="article">
+                <h1>Quick Start</h1>
+
+                <p>Create your first VoidxV2 UI in under 5 minutes.</p>
+
+                <h2 id="basic-example">Basic Example</h2>
+
+                <p>Here's a complete, working script that creates a simple UI:</p>
+
+                <pre><code class="language-lua">-- Load the library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ijosephyusufk-dev/VoidXV2/main/VoidLib.lua"))()
+
+-- Create a window
+local Window = Library:CreateWindow({
+    Name = "My First Script",
+    Subtitle = "v1.0.0",
+    LoadingEnabled = true
+})
+
+-- Create a tab
+local MainTab = Window:CreateTab("Main", "rbxassetid://7734053495")
+
+-- Add a toggle
+MainTab:CreateToggle("Auto Farm", false, function(state)
+    print("Auto Farm:", state)
+end)
+
+-- Add a slider
+MainTab:CreateSlider("Walk Speed", 16, 500, 16, function(value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+
+-- Add a button
+MainTab:CreateButton("Print Hello", function()
+    print("Hello World!")
+    Window:Notify("Success", "Hello was printed!", 2, "success")
+end)</code></pre>
+
+                <h2 id="step-by-step">Step by Step</h2>
+
+                <h3>1. Load the Library</h3>
+                <pre><code class="language-lua">local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ijosephyusufk-dev/VoidXV2/main/VoidLib.lua"))()</code></pre>
+                <p>This fetches and executes the VoidxV2 library, returning the main Library object.</p>
+
+                <h3>2. Create a Window</h3>
+                <pre><code class="language-lua">local Window = Library:CreateWindow({
+    Name = "My Script",        -- Window title
+    Subtitle = "v1.0.0",       -- Optional subtitle
+    LoadingEnabled = true      -- Show loading screen
+})</code></pre>
+                <p>The window is your main container. It includes the sidebar, tabs, and settings.</p>
+
+                <h3>3. Create Tabs</h3>
+                <pre><code class="language-lua">local MainTab = Window:CreateTab("Main", "rbxassetid://7734053495")</code></pre>
+                <p>Tabs organize your components. The second parameter is an optional icon.</p>
+
+                <h3>4. Add Components</h3>
+                <pre><code class="language-lua">MainTab:CreateToggle("Name", false, function(state)
+    -- Called when toggled
+end)
+
+MainTab:CreateSlider("Name", min, max, default, function(value)
+    -- Called when value changes
+end)
+
+MainTab:CreateButton("Name", function()
+    -- Called when clicked
+end)</code></pre>
+
+                <h2 id="whats-next">What's Next?</h2>
+
+                <ul>
+                    <li><a href="window.html">Window</a> - Learn all window options</li>
+                    <li><a href="components.html">Components</a> - Explore all UI components</li>
+                    <li><a href="esp.html">ESP System</a> - Add visual ESP features</li>
+                </ul>
+            </article>
+        </main>
+
+        <aside class="toc">
+            <div class="toc-title">On this page</div>
+            <nav class="toc-nav">
+                <a href="#basic-example" class="toc-link">Basic Example</a>
+                <a href="#step-by-step" class="toc-link">Step by Step</a>
+                <a href="#whats-next" class="toc-link">What's Next?</a>
+            </nav>
+        </aside>
+    </div>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <input type="text" class="search-input" placeholder="Search documentation...">
+            <div class="search-results"></div>
+            <div class="search-footer">
+                <span><kbd>↑↓</kbd> Navigate</span>
+                <span><kbd>Enter</kbd> Open</span>
+                <span><kbd>Esc</kbd> Close</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,9 @@
+{
+  "name": "VoidxLibrary",
+  "tree": {
+    "$className": "Folder",
+    "VoidxLib": {
+      "$path": "src"
+    }
+  }
+}
