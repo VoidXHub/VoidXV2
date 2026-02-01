@@ -10,7 +10,7 @@
     Version: 2.1.0
 ]]
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ijosephyusufk-dev/VoidXV2/main/VoidLib.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidXHub/VoidXV2/refs/heads/main/VoidLib.lua"))()
 
 --[[
 ═══════════════════════════════════════════════════════════════════════════════
